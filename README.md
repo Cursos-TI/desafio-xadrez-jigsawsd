@@ -88,11 +88,13 @@ int main() {
 ## Estrutura do Projeto
 
 ```
+## Estrutura do Projeto
+
 projeto-xadrez/
-│
-├── programa.c     # Código principal
-├── README.md      # Este arquivo
-└── makefile       # (opcional) Para compilar automaticamente
+- `xadrez.c`     Código principal em C
+- `README.md`      Documentação deste projeto
+- `Makefile`       Compilação com `make`
+
 ```
 
 ---
