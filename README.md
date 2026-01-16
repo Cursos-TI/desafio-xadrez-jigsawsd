@@ -102,6 +102,7 @@ int main() {
     return 0;
 }
 
+```
 Tecnologias
 	•	Linguagem: C (padrão ANSI)
 	•	Compilador: GCC
