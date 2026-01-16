@@ -1,102 +1,96 @@
-# Xadrez Simples - Movimentos com Laços em C
+##Xadrez Simples - Movimentos Complexos em C (Nível Mestre)
 
-Programa para iniciantes que simula movimentos das peças Torre, Bispo e Rainha no xadrez usando as três estruturas de repetição em C: `for`, `while` e `do-while`.
+Programa avançado que simula os movimentos das peças de xadrez utilizando recursividade, laços aninhados e estruturas complexas de repetição.
 
-## Funcionalidades
+Funcionalidades
+	•	Torre: Move 5 casas à direita usando Recursividade.
+	•	Bispo: Move 5 casas na diagonal usando Loops Aninhados.
+	•	Rainha: Move 8 casas à esquerda usando Recursividade.
+	•	Cavalo: Move-se em L (2 para cima, 1 para direita) usando Loops Complexos com múltiplas variáveis.
 
-- **Torre**: Move 5 casas à direita usando `for`
-- **Bispo**: Move 5 casas na diagonal (cima-direita) usando `while`  
-- **Rainha**: Move 8 casas à esquerda usando `do-while`
+Como Usar
+	1.	Salve o código em um arquivo  xadrez.c 
+	2.	Abra o terminal no mesmo diretório
+	3.	Compile:  gcc xadrez.c -o xadrez 
+	4.	Execute:  ./xadrez  (Linux/Mac) ou  xadrez.exe  (Windows)
 
-Cada peça imprime a direção do movimento a cada casa percorrida.
+    Saída Esperada
 
-## Como Usar
-
-1. Salve o código em um arquivo `xadrez.c`
-2. Abra o terminal no mesmo diretório
-3. Compile: `gcc xadrez.c -o xadrez`
-4. Execute: `./xadrez` (Linux/Mac) ou `xadrez.exe` (Windows)
-
-## Saída Esperada
-
-```
 Movimento da Torre:
-Direita
-Direita
-Direita
-Direita
-Direita
+Direita (x5)
 
 Movimento do Bispo:
-Cima, Direita
-Cima, Direita
-Cima, Direita
-Cima, Direita
-Cima, Direita
+Cima, Direita (x5)
 
 Movimento da Rainha:
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-Esquerda
-```
+Esquerda (x8)
 
-## Código Fonte
+Movimento do Cavalo:
+Cima
+Cima
+Direita
 
-Arquivo principal: `xadrez.c`
+Código Fonte
+Arquivo principal:  xadrez.c 
 
-```c
 #include <stdio.h>
 
-int main() {
-    // Torre com for (5 casas direita)
-    printf("Movimento da Torre:\n");
-    for(int passo = 0; passo < 5; passo++) {
+// Funções Recursivas
+void moverTorre(int n) {
+    if (n > 0) {
         printf("Direita\n");
+        moverTorre(n - 1);
     }
+}
 
-    // Bispo com while (5 casas diagonal)
-    printf("\nMovimento do Bispo:\n");
-    int passo_bispo = 0;
-    while(passo_bispo < 5) {
-        printf("Cima, Direita\n");
-        passo_bispo++;
-    }
-
-    // Rainha com do-while (8 casas esquerda)
-    printf("\nMovimento da Rainha:\n");
-    int passo_rainha = 0;
-    do {
+void moverRainha(int n) {
+    if (n > 0) {
         printf("Esquerda\n");
-        passo_rainha++;
-    } while(passo_rainha < 8);
+        moverRainha(n - 1);
+    }
+}
+
+int main() {
+    // Torre com Recursão
+    printf("Movimento da Torre:\n");
+    moverTorre(5);
+
+    // Bispo com Loops Aninhados
+    printf("\nMovimento do Bispo:\n");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 1; j++) {
+            printf("Cima, Direita\n");
+        }
+    }
+
+    // Rainha com Recursão
+    printf("\nMovimento da Rainha:\n");
+    moverRainha(8);
+
+    // Cavalo com Loops Complexos
+    printf("\nMovimento do Cavalo:\n");
+    for (int i = 0, j = 0; i < 2; i++) {
+        while (j < 1) {
+            printf("Cima\n");
+            j++;
+        }
+        printf("Cima\nDireita\n");
+        break;
+    }
 
     return 0;
 }
 
+Tecnologias
+	•	Linguagem: C (padrão ANSI)
+	•	Compilador: GCC / Clang
+	•	Nível: Mestre (Recursividade e Laços Aninhados)
 
-## Tecnologias
-
-- **Linguagem**: C (padrãoo ANSI)
-- **Compilador**: GCC
-- **Nível**: Novato
-
-## Estrutura do Projeto
-
-```
-## Estrutura do Projeto
+Estrutura do Projeto
 
 projeto-xadrez/
-- `xadrez.c`     Código principal em C
-- `README.md`      Documentação deste projeto
-- `Makefile`       Compilação com `make`
+├── xadrez.c       # Código principal
+├── README.md      # Documentação
+└── Makefile       # Compilação automática
 
-```
-
----
-
-**Desafio criado para aprendizado de estruturas de repetição em C**
+**Desafio finalizado para o aprendizado de lógica avançada em C**
