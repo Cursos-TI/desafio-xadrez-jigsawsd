@@ -1,41 +1,63 @@
-##Xadrez Simples - Movimentos Complexos em C (Nível Mestre)
+# Xadrez Simples - Movimentos Complexos em C
 
-Programa avançado que simula os movimentos das peças de xadrez utilizando recursividade, laços aninhados e estruturas complexas de repetição.
+Programa de nível mestre que simula movimentos das peças Torre, Bispo, Rainha e Cavalo no xadrez usando técnicas avançadas como recursividade e loops aninhados.
 
-Funcionalidades
-	•	Torre: Move 5 casas à direita usando Recursividade.
-	•	Bispo: Move 5 casas na diagonal usando Loops Aninhados.
-	•	Rainha: Move 8 casas à esquerda usando Recursividade.
-	•	Cavalo: Move-se em L (2 para cima, 1 para direita) usando Loops Complexos com múltiplas variáveis.
+## Funcionalidades
 
-Como Usar
-	1.	Salve o código em um arquivo  xadrez.c 
-	2.	Abra o terminal no mesmo diretório
-	3.	Compile:  gcc xadrez.c -o xadrez 
-	4.	Execute:  ./xadrez  (Linux/Mac) ou  xadrez.exe  (Windows)
+- **Torre**: Move 5 casas à direita usando recursividade
+- **Bispo**: Move 5 casas na diagonal (cima-direita) usando loops aninhados
+- **Rainha**: Move 8 casas à esquerda usando recursividade
+- **Cavalo**: Move 3 casas em L (cima-cima-direita) usando loops complexos
 
-    Saída Esperada
+Cada peça imprime a direção do movimento a cada casa percorrida.
+
+## Como Usar
+
+1. Salve o código em um arquivo `xadrez.c`
+2. Abra o terminal no mesmo diretório
+3. Compile: `gcc xadrez.c -o xadrez`
+4. Execute: `./xadrez` (Linux/Mac) ou `xadrez.exe` (Windows)
+
+## Saída Esperada
 
 Movimento da Torre:
-Direita (x5)
+Direita
+Direita
+Direita
+Direita
+Direita
 
 Movimento do Bispo:
-Cima, Direita (x5)
+Cima, Direita
+Cima, Direita
+Cima, Direita
+Cima, Direita
+Cima, Direita
 
 Movimento da Rainha:
-Esquerda (x8)
+Esquerda
+Esquerda
+Esquerda
+Esquerda
+Esquerda
+Esquerda
+Esquerda
+Esquerda
 
 Movimento do Cavalo:
 Cima
 Cima
 Direita
 
-Código Fonte
-Arquivo principal:  xadrez.c 
 
+## Código Fonte
+
+Arquivo principal: `xadrez.c`
+
+```c
 #include <stdio.h>
 
-// Funções Recursivas
+// Funções recursivas para movimentação
 void moverTorre(int n) {
     if (n > 0) {
         printf("Direita\n");
@@ -51,11 +73,11 @@ void moverRainha(int n) {
 }
 
 int main() {
-    // Torre com Recursão
+    // Torre com recursividade (5 casas direita)
     printf("Movimento da Torre:\n");
     moverTorre(5);
 
-    // Bispo com Loops Aninhados
+    // Bispo com loops aninhados (5 casas diagonal)
     printf("\nMovimento do Bispo:\n");
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 1; j++) {
@@ -63,19 +85,18 @@ int main() {
         }
     }
 
-    // Rainha com Recursão
+    // Rainha com recursividade (8 casas esquerda)
     printf("\nMovimento da Rainha:\n");
     moverRainha(8);
 
-    // Cavalo com Loops Complexos
+    // Cavalo com loops complexos (2 cima, 1 direita)
     printf("\nMovimento do Cavalo:\n");
-    for (int i = 0, j = 0; i < 2; i++) {
-        while (j < 1) {
+    for (int i = 0, j = 0; i < 1; i++) {
+        while (j < 2) {
             printf("Cima\n");
             j++;
         }
-        printf("Cima\nDireita\n");
-        break;
+        printf("Direita\n");
     }
 
     return 0;
@@ -83,14 +104,15 @@ int main() {
 
 Tecnologias
 	•	Linguagem: C (padrão ANSI)
-	•	Compilador: GCC / Clang
-	•	Nível: Mestre (Recursividade e Laços Aninhados)
+	•	Compilador: GCC
+	•	Nível: Mestre
 
 Estrutura do Projeto
 
 projeto-xadrez/
+│
 ├── xadrez.c       # Código principal
-├── README.md      # Documentação
-└── Makefile       # Compilação automática
+├── README.md      # Este arquivo
+└── makefile       # (opcional) Para compilar automaticamente
 
-**Desafio finalizado para o aprendizado de lógica avançada em C**
+**Desafio criado para aprendizado de recursividade e loops complexos em C**
