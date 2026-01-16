@@ -103,6 +103,7 @@ int main() {
 }
 
 ```
+
 Tecnologias
 	•	Linguagem: C (padrão ANSI)
 	•	Compilador: GCC
@@ -115,5 +116,6 @@ projeto-xadrez/
 ├── xadrez.c       # Código principal
 ├── README.md      # Este arquivo
 └── makefile       # (opcional) Para compilar automaticamente
+
 
 **Desafio criado para aprendizado de recursividade e loops complexos em C**
