@@ -104,18 +104,19 @@ int main() {
 
 ```
 
-Tecnologias
-	•	Linguagem: C (padrão ANSI)
-	•	Compilador: GCC
-	•	Nível: Mestre
+## Tecnologias
 
-Estrutura do Projeto
+- **Linguagem**: C (padrão ANSI)
+- **Compilador**: GCC
+- **Nível**: Mestre
 
-projeto-xadrez/
-│
-├── xadrez.c       # Código principal
-├── README.md      # Este arquivo
-└── makefile       # (opcional) Para compilar automaticamente
+## Estrutura do Projeto
 
+*   `projeto-xadrez/`
+*   `├── xadrez.c`
+*   `├── README.md`
+*   `└── makefile`
+
+---
 
 **Desafio criado para aprendizado de recursividade e loops complexos em C**
